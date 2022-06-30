@@ -16,15 +16,17 @@ export class AppComponent {
     this.resultado = parseFloat(this.num1) + parseFloat(this.num2);
   }
   subtrair() {
-    this.resultado = parseFloat(this.num1) + parseFloat(this.num2);
+    this.resultado = parseFloat(this.num1) - parseFloat(this.num2);
   }
   multiplicar() {
-    this.resultado = parseFloat(this.num1) + parseFloat(this.num2);
+    this.resultado = parseFloat(this.num1) * parseFloat(this.num2);
   }
   dividir() {
     if (this.num1 == '0' || this.num2 == '0') {
-    } else {
-      this.resultado = parseFloat(this.num1);
+      this.presentToast();
+    } 
+    else {
+      this.resultado = parseFloat(this.num1)/parseFloat(this.num2);
     }
   }
   async presentToast() {
